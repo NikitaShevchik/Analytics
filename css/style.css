@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -88,6 +89,122 @@ h6 {
 }
 
 /*--------------------*/
-.home__content {
-  display: grid;
+body {
+  font-family: "Roboto", sans-serif;
+  color: #8794ba;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: #172755;
+}
+
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 140px;
+}
+.header__content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__navigation {
+  display: flex;
+  flex-direction: row;
+}
+.header__profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation__logotype {
+  margin: 0 95px 0 0;
+}
+
+.logotype {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logotype_pink {
+  color: #fff;
+}
+.logotype_pink .logotype__image {
+  padding-right: 13px;
+}
+.logotype_pink .logotype__image img {
+  width: 40px;
+}
+.logotype_pink .logotype__name {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.logotype_blue .logotype__image {
+  padding-right: 13px;
+}
+.logotype_blue .logotype__image img {
+  width: 30px;
+  color: #8794ba;
+}
+.logotype_blue .logotype__name {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.menu {
+  font-size: 16px;
+}
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+}
+.menu__item {
+  padding: 0 36px 0 0;
+}
+.menu__item:last-child {
+  padding: 0;
+}
+.menu__link {
+  color: #8794ba;
+  transition: 0.1s ease-out;
+}
+.menu__link:hover {
+  transition: 0.1s ease-in;
+  color: #fff;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.profile a {
+  color: #8794ba;
+}
+.profile__signin {
+  margin-right: 40px;
+  transition: 0.1s ease-out;
+}
+.profile__signin:hover {
+  transition: 0.1s ease-in;
+  color: #fff;
+  text-decoration: underline;
+}
+.profile__signup {
+  padding: 10px 50px;
+  border: 1px solid #465b95;
+  border-radius: 70px;
+  transition: 0.2s ease-out;
+}
+.profile__signup:hover {
+  transition: 0.2s ease-in;
+  color: #fff;
+  background-color: #465b95;
 }

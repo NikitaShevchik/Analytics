@@ -1,6 +1,176 @@
+// Обнуление стилей
 @import "./nullstyle.scss";
-.home {
+// Шрифт
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+//mixins
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+//SCSS
+body {
+    font-family: "Roboto", sans-serif;
+    color: #8794ba;
+    font-size: 18px;
+    line-height: 1.5;
+    // background-color: #f8f9ff;
+    background-color: #172755;
+}
+.wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.header {
+    height: 140px;
     &__content {
-        display: grid;
+        @include flex-row();
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__navigation {
+        @include flex-row();
+    }
+
+    &__profile {
+        @include flex-row();
+    }
+}
+.navigation {
+    &__logotype {
+        margin: 0 95px 0 0;
+    }
+}
+.logotype {
+    @include flex-row();
+    align-items: center;
+    &_pink {
+        color: #fff;
+        .logotype__image {
+            padding-right: 13px;
+            img {
+                width: 40px;
+            }
+        }
+        .logotype__name {
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+    &_blue {
+        .logotype__image {
+            padding-right: 13px;
+            img {
+                width: 30px;
+                color: #8794ba;
+            }
+        }
+        .logotype__name {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+}
+.info {
+    &__menu {
+    }
+}
+.menu {
+    font-size: 16px;
+    &__list {
+        @include flex-row();
+        height: 100%;
+        align-items: center;
+    }
+    &__item {
+        padding: 0 36px 0 0;
+        &:last-child {
+            padding: 0;
+        }
+    }
+    &__link {
+        color: #8794ba;
+        transition: 0.1s ease-out;
+        &:hover {
+            transition: 0.1s ease-in;
+            color: #fff;
+        }
+    }
+}
+.profile {
+    @include flex-row();
+    align-items: center;
+    a {
+        color: #8794ba;
+    }
+    &__signin {
+        margin-right: 40px;
+        transition: 0.1s ease-out;
+        &:hover {
+            transition: 0.1s ease-in;
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+
+    &__signup {
+        padding: 10px 50px;
+        border: 1px solid #465b95;
+        border-radius: 70px;
+        transition: 0.2s ease-out;
+        &:hover {
+            transition: 0.2s ease-in;
+            color: #fff;
+            background-color: #465b95;
+        }
+    }
+}
+.main {
+}
+.welcome {
+    &__content {
+    }
+
+    &__info {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+
+    &__button {
+    }
+
+    &__images {
+    }
+}
+.button {
+    &_pink {
+    }
+}
+.features {
+}
+.capabilities {
+}
+.price {
+}
+.footer {
+    &__content {
+    }
+
+    &__logotype {
+    }
+
+    &__menu {
+    }
+
+    &__links {
+    }
+
+    &__link {
     }
 }
