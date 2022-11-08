@@ -126,6 +126,7 @@ body {
 }
 
 .logotype {
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -207,4 +208,30 @@ body {
   transition: 0.2s ease-in;
   color: #fff;
   background-color: #465b95;
+}
+
+.footer {
+  height: 150px;
+  border-top: 1px solid #2a407c;
+}
+.footer__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+.footer__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer__link {
+  margin-right: 40px;
+}
+.footer__link:last-child {
+  margin: 0;
+}
+.footer__link img {
+  display: inline-block;
+  color: #fff;
 }
