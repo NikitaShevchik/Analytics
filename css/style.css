@@ -278,20 +278,22 @@ body {
   left: 0;
   position: absolute;
   z-index: 1;
+  display: inline-block;
   background-color: #fff;
   box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
   border-radius: 30px;
-  padding: 30px 40px;
+  padding: 40px 50px;
 }
 .welcome__graphs {
   top: 200px;
   left: 70px;
   position: absolute;
   z-index: 0;
+  display: inline-block;
   background-color: #fff;
   box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
   border-radius: 30px;
-  padding: 30px 40px;
+  padding: 40px 50px;
 }
 
 .features {
@@ -339,6 +341,41 @@ body {
 }
 .cards__description {
   text-align: center;
+}
+
+.caps__item {
+  margin-bottom: 120px;
+}
+.caps__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.caps__description {
+  padding-right: 200px;
+}
+.caps__title {
+  font-size: 40px;
+  color: #172755;
+  font-weight: 700;
+}
+.caps__graph {
+  display: flex;
+}
+.caps__rectangle {
+  display: inline-block;
+  background-color: #fff;
+  box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
+  border-radius: 30px;
+  padding: 40px 50px;
+  padding: 70px 90px;
+}
+
+.caps__item_reverse .caps__description {
+  padding-left: 200px;
+  text-align: right;
+  padding-right: 0;
 }
 
 .footer {

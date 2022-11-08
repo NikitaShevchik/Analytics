@@ -8,10 +8,11 @@
     flex-direction: row;
 }
 @mixin rectangle-shadow {
+    display: inline-block;
     background-color: #fff;
     box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
     border-radius: 30px;
-    padding: 30px 40px;
+    padding: 40px 50px;
 }
 //SCSS
 body {
@@ -285,24 +286,42 @@ body {
 }
 .caps {
     &__item {
+        margin-bottom: 120px;
     }
 
     &__content {
+        @include flex-row();
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__description {
+        padding-right: 200px;
     }
 
     &__title {
+        font-size: 40px;
+        color: #172755;
+        font-weight: 700;
     }
 
     &__text {
     }
 
     &__graph {
+        display: flex;
     }
 
     &__rectangle {
+        @include rectangle-shadow();
+        padding: 70px 90px;
+    }
+}
+.caps__item_reverse {
+    .caps__description {
+        padding-left: 200px;
+        text-align: right;
+        padding-right: 0;
     }
 }
 
