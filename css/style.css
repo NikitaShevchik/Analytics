@@ -417,7 +417,7 @@ body {
 }
 .caps__description {
   padding-right: 200px;
-  flex: 1 1 50%;
+  flex: 1 1 60%;
 }
 .caps__title {
   font-size: 40px;
@@ -428,7 +428,7 @@ body {
 }
 .caps__graph {
   display: flex;
-  flex: 1 1 50%;
+  flex: 1 1 40%;
 }
 .caps__graph img {
   -o-object-fit: cover;
@@ -442,7 +442,7 @@ body {
   box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
   border-radius: 30px;
   padding: 40px 50px;
-  padding: 70px 90px;
+  padding: 50px 70px;
 }
 
 .caps__item_reverse .caps__description {
@@ -459,18 +459,20 @@ body {
   width: 100%;
 }
 .price__content {
+  margin: 0 -20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .price__title {
+  padding: 0 20px;
   font-size: 40px;
   font-weight: 700;
   padding-bottom: 30px;
   color: #fff;
 }
 .price__description {
-  padding-bottom: 80px;
+  padding: 0 20px 80px 20px;
   text-align: center;
 }
 .price__tariffs {
@@ -488,6 +490,12 @@ body {
   background-color: #0f1f4b;
   margin: 0px 40px 30px 40px;
   transition: all 0.1s linear;
+}
+.tariffs__item:first-child {
+  margin: 0 40px 30px 80px;
+}
+.tariffs__item:last-child {
+  margin: 0 80px 30px 40px;
 }
 .tariffs__content {
   padding: 50px 60px;
