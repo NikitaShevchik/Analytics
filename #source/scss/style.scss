@@ -40,19 +40,109 @@ body {
 .content {
     overflow: hidden;
 }
-.content::before {
-    content: "";
+// .content::before {
+//     content: "";
+//     position: absolute;
+//     top: -5%;
+//     left: -5%;
+//     z-index: -2;
+//     width: 110%;
+//     height: 850px;
+//     border-bottom: 10px solid #ef2a82;
+//     transform: rotate(-3deg);
+//     background-color: #172755;
+// }
+.content__background {
     position: absolute;
-    top: -5%;
-    left: -5%;
+    overflow: hidden;
     z-index: -2;
+    left: -5%;
     width: 110%;
-    height: 850px;
-    border-bottom: 10px solid #ef2a82;
-    transform: rotate(-3deg);
     background-color: #172755;
-    // overflow: hidden;
+    border: 15px solid #ef2a82;
+    &_top {
+        top: -5%;
+        height: 850px;
+        transform: rotate(-3deg);
+        &::before {
+            content: "";
+            background-image: url("/images/background logotype/background.svg");
+            background-size: 600px;
+            background-repeat: no-repeat;
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            opacity: 0.1;
+            left: 0;
+            top: -7%;
+        }
+        &::after {
+            content: "";
+            background-image: url("/images/background logotype/background.svg");
+            background-size: 1300px;
+            background-repeat: no-repeat;
+            width: 1300px;
+            height: 1300px;
+            position: absolute;
+            opacity: 0.1;
+            right: 0;
+            top: 0;
+        }
+    }
+    &_bottom {
+        height: 1250px;
+        bottom: -5%;
+        transform: rotate(-4deg);
+        &::after {
+            content: "";
+            background-image: url("/images/background logotype/background.svg");
+            background-size: 2100px;
+            background-repeat: no-repeat;
+            width: 2100px;
+            height: 2100px;
+            position: absolute;
+            opacity: 0.1;
+            right: -20%;
+            top: 15%;
+        }
+    }
 }
+// .content::after {
+//     content: "";
+//     position: absolute;
+//     bottom: -8%;
+//     left: -5%;
+//     z-index: -2;
+//     width: 110%;
+//     height: 1400px;
+//     border-top: 10px solid #ef2a82;
+//     transform: rotate(-5deg);
+//     background-color: #172755;
+//     background-image: url("/images/background logotype/background.svg");
+//     background-repeat: no-repeat;
+// }
+// .content__background_s {
+//     background-image: url("/images/background logotype/background.svg");
+//     background-size: 800px;
+//     background-repeat: no-repeat;
+//     width: 800px;
+//     height: 800px;
+//     position: absolute;
+//     opacity: 0.1;
+//     left: -7%;
+//     top: -7%;
+// }
+// .content__background_b{
+//     background-image: url("/images/background logotype/background.svg");
+//     background-size: 1500px;
+//     background-repeat: no-repeat;
+//     width: 1500px;
+//     height: 1500px;
+//     position: absolute;
+//     opacity: 0.1;
+//     right: -7%;
+//     top: -7%;
+// }
 .background {
     position: absolute;
     z-index: -2;
@@ -438,7 +528,7 @@ body {
     border: 1px solid red;
     background-size: 100vw;
     position: relative;
-    padding: 100px 0 250px 0;
+    padding: 200px 0 250px 0;
     width: 100%;
     &__content {
         display: flex;
