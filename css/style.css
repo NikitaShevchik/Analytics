@@ -101,12 +101,10 @@ body {
   max-width: 1600px;
   padding: 0 20px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .content {
   position: relative;
-  border: 1px solid red;
 }
 
 .content {
@@ -170,7 +168,6 @@ body {
 }
 
 .header {
-  border: 1px solid blue;
   position: absolute;
   height: 140px;
   z-index: 10;
@@ -186,6 +183,9 @@ body {
   flex-direction: row;
   height: 100%;
   justify-content: space-between;
+  padding: 0 20px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .header__navigation {
   display: flex;
@@ -194,6 +194,48 @@ body {
 .header__profile {
   display: flex;
   flex-direction: row;
+}
+.header__menuburger {
+  display: none;
+}
+.header__hamburger {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+  margin-left: 20px;
+}
+.header__hamburger span {
+  transition: all 0.2s linear;
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #8794ba;
+}
+.header__hamburger span:before {
+  content: "";
+  transition: all 0.2s linear;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #8794ba;
+}
+.header__hamburger span:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #8794ba;
 }
 
 .navigation__logotype {
@@ -224,7 +266,6 @@ body {
 }
 .logotype_blue .logotype__image img {
   width: 30px;
-  color: #8794ba;
 }
 .logotype_blue .logotype__name {
   font-size: 14px;
@@ -287,7 +328,6 @@ body {
 }
 
 .welcome {
-  border: 1px solid red;
   height: 850px;
 }
 .welcome__content {
@@ -353,7 +393,6 @@ body {
 }
 
 .features {
-  border: 1px solid red;
   padding: 40px 0 120px 0;
 }
 .features__content {
@@ -379,9 +418,6 @@ body {
   justify-content: space-between;
 }
 
-.cards {
-  border: 1px solid green;
-}
 .cards__item {
   padding: 0 10px;
   display: flex;
@@ -397,15 +433,13 @@ body {
   color: #172755;
   font-weight: 700;
   padding-bottom: 15px;
+  text-align: center;
   line-height: 1.4;
 }
 .cards__description {
   text-align: center;
 }
 
-.caps {
-  border: 1px solid red;
-}
 .caps__item {
   margin-bottom: 120px;
 }
@@ -452,7 +486,6 @@ body {
 }
 
 .price {
-  border: 1px solid red;
   background-size: 100vw;
   position: relative;
   padding: 200px 0 220px 0;
@@ -582,4 +615,228 @@ body {
 }
 .footer__link:last-child {
   margin: 0;
+}
+
+@media (max-width: 1300px) {
+  .tariffs__item {
+    margin: 0px 20px 30px 20px;
+  }
+  .tariffs__item:first-child {
+    margin: 0 20px 30px 40px;
+  }
+  .tariffs__item:last-child {
+    margin: 0 40px 30px 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .content__background {
+    width: 190%;
+    left: -20%;
+  }
+  .content__background_bottom {
+    height: 1250px;
+    bottom: -5%;
+  }
+  .caps__description {
+    padding-right: 100px;
+    flex: 1 1 50%;
+  }
+  .caps__item_reverse .caps__description {
+    padding-left: 100px;
+  }
+}
+@media (max-width: 900px) {
+  .header__hamburger {
+    display: flex;
+  }
+  .info__menu {
+    display: none;
+  }
+  .burger {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+  }
+  .burger__menu {
+    padding: 120px 20px 0 20px;
+  }
+  .burger__items {
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .burger__item {
+    margin: 10px 0;
+  }
+  .burger__link {
+    color: #fff;
+  }
+  .header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .header__content {
+    display: flex;
+    flex-direction: row;
+    background-color: #172755;
+    box-shadow: 0px 3px 5px rgba(18, 33, 77, 0.7058823529);
+    z-index: 10;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .header__navigation {
+    display: flex;
+    flex-direction: row;
+  }
+  .header__profile {
+    display: flex;
+    flex-direction: row;
+  }
+  .burger._open {
+    display: block;
+  }
+  body._block {
+    overflow: hidden;
+  }
+  .welcome {
+    height: 100%;
+    padding: 150px 0 200px 0;
+  }
+  .welcome__content {
+    flex-direction: column-reverse;
+    gap: 0;
+    height: 100%;
+    align-items: center;
+  }
+  .welcome__info {
+    flex: 1 1 100%;
+  }
+  .welcome__button {
+    padding: 15px 0;
+    width: 100%;
+    color: #fff;
+    transition: 0.2s linear;
+  }
+  .welcome__images {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0 0 25px 0;
+  }
+  .welcome__ages {
+    display: none;
+  }
+  .welcome__graphs {
+    top: 0;
+    left: 0;
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 0;
+    background-color: #fff;
+    box-shadow: none;
+    border-radius: 30px;
+    padding: 20px;
+  }
+  .welcome__graphs img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .content__background {
+    position: absolute;
+    overflow: hidden;
+    z-index: -2;
+    width: 190%;
+    left: -20%;
+  }
+  .content__background_top {
+    height: 1100px;
+  }
+  .features__content {
+    align-items: flex-start;
+  }
+  .features__text {
+    padding: 0 0 40px 0;
+    text-align: left;
+  }
+  .features__cards {
+    flex-direction: column;
+  }
+  .cards__item {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 35px;
+    align-items: center;
+  }
+  .cards__item:last-child {
+    margin-bottom: 0;
+  }
+  .cards__image {
+    margin-bottom: 0;
+    padding: 0 28px 0 0;
+  }
+  .cards__title {
+    text-align: left;
+    padding-bottom: 10px;
+    line-height: 1.4;
+  }
+  .cards__description {
+    text-align: left;
+  }
+}
+.header__hamburger._cross span {
+  rotate: 45deg;
+}
+.header__hamburger._cross span:before {
+  content: "";
+  transition: all 0.2s linear;
+  top: 0;
+  transform: rotate(90deg);
+}
+.header__hamburger._cross span:after {
+  content: "";
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    height: 100px;
+  }
+  .footer__menu {
+    display: none;
+  }
+  .welcome__title {
+    font-size: 31px;
+  }
+}
+@media (max-width: 600px) {
+  .profile__signup {
+    display: none;
+  }
+  .profile__signin {
+    margin-right: 10px;
+  }
+  .navigation__logotype {
+    margin: 0 40px 0 0;
+  }
+  .cards__description {
+    font-size: 14px;
+  }
 }

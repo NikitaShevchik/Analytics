@@ -1,8 +1,8 @@
-// Обнуление стилей
+// Null style
 @import "./nullstyle.scss";
-// Шрифт
+// Font
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-//mixins
+// Mixins
 @mixin flex-row {
     display: flex;
     flex-direction: row;
@@ -14,29 +14,27 @@
     border-radius: 30px;
     padding: 40px 50px;
 }
-//SCSS
+// Variables
+$pink: #ef2a82;
+$blue: #8794ba;
+// SCSS
 body {
     font-family: "Roboto", sans-serif;
-    color: #8794ba;
+    color: $blue;
     font-size: 18px;
     line-height: 1.5;
     background-color: #f8f9ff;
-    // background-color: #172755;
-    // overflow-x: hidden;
 }
-//main wrapper
+// Main wrapper
 .wrapper {
     max-width: 1600px;
     padding: 0 20px;
     margin: 0 auto;
-    // position: relative;
-    border: 1px solid red;
 }
 .content {
     position: relative;
-    border: 1px solid red;
 }
-// to make blue background at the top
+
 .content {
     overflow: hidden;
 }
@@ -59,7 +57,7 @@ body {
     left: -5%;
     width: 110%;
     background-color: #172755;
-    border: 15px solid #ef2a82;
+    border: 15px solid $pink;
     &_top {
         top: -5%;
         height: 950px;
@@ -216,10 +214,10 @@ body {
 //     background-color: #172755;
 // }
 
-//header
+// Header
 
 .header {
-    border: 1px solid blue;
+    // border: 1px solid blue;
     position: absolute;
     height: 140px;
     z-index: 10;
@@ -233,6 +231,9 @@ body {
         @include flex-row();
         height: 100%;
         justify-content: space-between;
+        padding: 0 20px;
+        max-width: 1600px;
+        margin: 0 auto;
     }
 
     &__navigation {
@@ -242,9 +243,51 @@ body {
     &__profile {
         @include flex-row();
     }
+    &__menuburger {
+        display: none;
+    }
+    &__hamburger {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+        margin-left: 20px;
+        span {
+            transition: all 0.2s linear;
+            position: relative;
+            display: block;
+            width: 24px;
+            height: 3px;
+            background-color: $blue;
+            &:before {
+                content: "";
+                transition: all 0.2s linear;
+                position: absolute;
+                top: -10px;
+                left: 0;
+                display: block;
+                width: 24px;
+                height: 3px;
+                background-color: #8794ba;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 0;
+                display: block;
+                width: 24px;
+                height: 3px;
+                background-color: $blue;
+            }
+        }
+    }
 }
 
-//left part of header
+// Left part of header
 
 .navigation {
     &__logotype {
@@ -276,7 +319,6 @@ body {
             padding-right: 13px;
             img {
                 width: 30px;
-                color: #8794ba;
             }
         }
         .logotype__name {
@@ -287,7 +329,7 @@ body {
     }
 }
 
-//nav bar
+// Nav bar
 
 .menu {
     font-size: 16px;
@@ -303,7 +345,7 @@ body {
         }
     }
     &__link {
-        color: #8794ba;
+        color: $blue;
         transition: 0.1s ease-out;
         &:hover {
             transition: 0.1s ease-in;
@@ -312,13 +354,13 @@ body {
     }
 }
 
-//sign in and up buttons
+// Sign in and up buttons
 
 .profile {
     @include flex-row();
     align-items: center;
     a {
-        color: #8794ba;
+        color: $blue;
     }
     &__signin {
         margin-right: 40px;
@@ -343,10 +385,9 @@ body {
     }
 }
 
-// first section
+// First section
 
 .welcome {
-    border: 1px solid red;
     height: 850px;
     &__content {
         @include flex-row();
@@ -373,7 +414,7 @@ body {
 
     &__button {
         font-size: 16px;
-        background-color: #ef2a82;
+        background-color: $pink;
         border-radius: 70px;
         padding: 15px 80px;
         color: #fff;
@@ -386,7 +427,6 @@ body {
         }
     }
     &__images {
-        // overflow: hidden;
         flex: 1 1 60%;
         position: relative;
         height: 100%;
@@ -408,10 +448,9 @@ body {
     }
 }
 
-//second section
+// Second section
 
 .features {
-    border: 1px solid red;
     padding: 40px 0 120px 0;
     &__content {
         display: flex;
@@ -438,9 +477,8 @@ body {
         justify-content: space-between;
     }
 }
-//cards in features section
+// Cards in features section
 .cards {
-    border: 1px solid green;
     &__item {
         padding: 0 10px;
         display: flex;
@@ -458,6 +496,7 @@ body {
         color: #172755;
         font-weight: 700;
         padding-bottom: 15px;
+        text-align: center;
         line-height: 1.4;
     }
 
@@ -466,10 +505,9 @@ body {
     }
 }
 
-//3rd section
+// 3rd section
 
 .caps {
-    border: 1px solid red;
     &__item {
         margin-bottom: 120px;
     }
@@ -508,7 +546,7 @@ body {
         padding: 50px 70px;
     }
 }
-//graph + text card
+// Graph + text card
 .caps__item_reverse {
     .caps__description {
         padding-left: 200px;
@@ -517,10 +555,9 @@ body {
     }
 }
 
-//4th section
+// 4th section
 
 .price {
-    border: 1px solid red;
     background-size: 100vw;
     position: relative;
     padding: 200px 0 220px 0;
@@ -548,11 +585,8 @@ body {
     &__tariffs {
         @include flex-row();
         justify-content: space-between;
-        // flex-wrap: wrap;
-        // justify-items: center;
         width: 100%;
         overflow: auto;
-        // align-items: center;
         align-content: center;
     }
     // &::before {
@@ -573,11 +607,11 @@ body {
         background-color: #0f1f4b;
         margin: 0px 40px 30px 40px;
         transition: all 0.1s linear;
-        &:first-child{
-            margin: 0 40px 30px 80px
+        &:first-child {
+            margin: 0 40px 30px 80px;
         }
-        &:last-child{
-            margin: 0 80px 30px 40px
+        &:last-child {
+            margin: 0 80px 30px 40px;
         }
     }
 
@@ -618,7 +652,6 @@ body {
         font-size: 16px;
         line-height: 1.2;
         padding: 15px 80px;
-        // background-color: #ef2a82;
         background-color: transparent;
         border: 1px solid #465b95;
         color: #fff;
@@ -631,7 +664,7 @@ body {
     background-color: #fff;
     box-shadow: 0px 18px 30px -15px #060f28;
     .tariffs__button {
-        background-color: #ef2a82;
+        background-color: $pink;
         border: 1px solid transparent;
     }
     .tariffs__title {
@@ -642,7 +675,7 @@ body {
     }
 }
 
-//footer
+// Footer
 
 .footer {
     position: absolute;
@@ -659,10 +692,7 @@ body {
         justify-content: space-between;
         height: 100%;
     }
-    // &__logotype {
-    // }
-    // &__menu {
-    // }
+
     &__links {
         @include flex-row();
         align-items: center;
@@ -677,5 +707,253 @@ body {
         &:last-child {
             margin: 0;
         }
+    }
+}
+
+// Adaptive
+
+@media (max-width: 1300px) {
+    .tariffs {
+        &__item {
+            margin: 0px 20px 30px 20px;
+            &:first-child {
+                margin: 0 20px 30px 40px;
+            }
+            &:last-child {
+                margin: 0 40px 30px 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .content__background {
+        width: 190%;
+        left: -20%;
+        &_bottom {
+            height: 1250px;
+            bottom: -5%;
+        }
+    }
+    .caps__description {
+        padding-right: 100px;
+        flex: 1 1 50%;
+    }
+    .caps__item_reverse {
+        .caps__description {
+            padding-left: 100px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .header__hamburger {
+        display: flex;
+    }
+    .info__menu {
+        display: none;
+    }
+    .burger {
+        background-color: rgba(0, 0, 0, 0.8);
+        position: relative;
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        display: none;
+        &__menu {
+            padding: 120px 20px 0 20px;
+        }
+        &__items {
+            font-size: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            margin: 10px 0;
+        }
+        &__link {
+            color: #fff;
+        }
+    }
+    .header {
+        width: 100%;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        &__content {
+            @include flex-row();
+            background-color: #172755;
+            box-shadow: 0px 3px 5px #12214db4;
+            z-index: 10;
+            height: 100%;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        &__navigation {
+            @include flex-row();
+        }
+
+        &__profile {
+            @include flex-row();
+        }
+    }
+    .burger._open {
+        display: block;
+    }
+    body._block {
+        overflow: hidden;
+    }
+    .welcome {
+        height: 100%;
+        padding: 150px 0 200px 0;
+        &__content {
+            // padding: 150px 0 0 0;
+            flex-direction: column-reverse;
+            gap: 0;
+            height: 100%;
+            align-items: center;
+        }
+
+        &__info {
+            flex: 1 1 100%;
+        }
+
+        &__title {
+        }
+
+        &__text {
+        }
+
+        &__button {
+            padding: 15px 0;
+            width: 100%;
+            color: #fff;
+            transition: 0.2s linear;
+        }
+        &__images {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            margin: 0 0 25px 0;
+        }
+        &__ages {
+            display: none;
+        }
+
+        &__graphs {
+            top: 0;
+            left: 0;
+            position: relative;
+            display: block;
+            width: 100%;
+            z-index: 0;
+            background-color: #fff;
+            box-shadow: none;
+            border-radius: 30px;
+            padding: 20px;
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .content__background {
+        position: absolute;
+        overflow: hidden;
+        z-index: -2;
+        width: 190%;
+        left: -20%;
+        &_top {
+            height: 1100px;
+        }
+    }
+    .features__content {
+        align-items: flex-start;
+    }
+    .features__text {
+        padding: 0 0 40px 0;
+        text-align: left;
+    }
+    .features__cards {
+        flex-direction: column;
+    }
+    // Cards in features section
+    .cards {
+        &__item {
+            padding: 0 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-bottom: 35px;
+            align-items: center;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__image {
+            margin-bottom: 0;
+            padding: 0 28px 0 0;
+        }
+
+        &__title {
+            text-align: left;
+            padding-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        &__description {
+            text-align: left;
+        }
+    }
+}
+.header__hamburger._cross {
+    span {
+        rotate: 45deg;
+        &:before {
+            content: "";
+            transition: all 0.2s linear;
+            top: 0;
+            transform: rotate(90deg);
+        }
+        &:after {
+            content: "";
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .footer {
+        height: 100px;
+    }
+    .footer__menu {
+        display: none;
+    }
+    .welcome__title {
+        font-size: 31px;
+    }
+}
+@media (max-width: 600px) {
+    .profile__signup {
+        display: none;
+    }
+    .profile__signin {
+        margin-right: 10px;
+    }
+    .navigation__logotype {
+        margin: 0 40px 0 0;
+    }
+    .cards__description {
+        font-size: 14px;
     }
 }
