@@ -659,7 +659,7 @@ body {
     display: none;
   }
   .burger {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(15, 31, 75, 0.7843137255);
     position: relative;
     display: block;
     position: fixed;
@@ -669,7 +669,7 @@ body {
     display: none;
   }
   .burger__menu {
-    padding: 120px 20px 0 20px;
+    padding: 80px 20px 0 20px;
   }
   .burger__items {
     font-size: 60px;
@@ -685,7 +685,7 @@ body {
   }
   .header {
     width: 100%;
-    height: 100px;
+    height: 80px;
     position: fixed;
     top: 0;
     left: 0;
