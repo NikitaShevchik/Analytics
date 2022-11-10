@@ -105,9 +105,6 @@ body {
 
 .content {
   position: relative;
-}
-
-.content {
   overflow: hidden;
 }
 
@@ -423,7 +420,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
 }
 .cards__image {
   margin-bottom: 30px;

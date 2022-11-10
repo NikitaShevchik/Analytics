@@ -33,23 +33,9 @@ body {
 }
 .content {
     position: relative;
-}
-
-.content {
     overflow: hidden;
 }
-// .content::before {
-//     content: "";
-//     position: absolute;
-//     top: -5%;
-//     left: -5%;
-//     z-index: -2;
-//     width: 110%;
-//     height: 850px;
-//     border-bottom: 10px solid #ef2a82;
-//     transform: rotate(-3deg);
-//     background-color: #172755;
-// }
+
 .content__background {
     position: absolute;
     overflow: hidden;
@@ -106,119 +92,10 @@ body {
         }
     }
 }
-// .content::after {
-//     content: "";
-//     position: absolute;
-//     bottom: -8%;
-//     left: -5%;
-//     z-index: -2;
-//     width: 110%;
-//     height: 1400px;
-//     border-top: 10px solid #ef2a82;
-//     transform: rotate(-5deg);
-//     background-color: #172755;
-//     background-image: url("/images/background logotype/background.svg");
-//     background-repeat: no-repeat;
-// }
-// .content__background_s {
-//     background-image: url("/images/background logotype/background.svg");
-//     background-size: 800px;
-//     background-repeat: no-repeat;
-//     width: 800px;
-//     height: 800px;
-//     position: absolute;
-//     opacity: 0.1;
-//     left: -7%;
-//     top: -7%;
-// }
-// .content__background_b{
-//     background-image: url("/images/background logotype/background.svg");
-//     background-size: 1500px;
-//     background-repeat: no-repeat;
-//     width: 1500px;
-//     height: 1500px;
-//     position: absolute;
-//     opacity: 0.1;
-//     right: -7%;
-//     top: -7%;
-// }
-// .background {
-//     position: absolute;
-//     z-index: -2;
-//     width: 100vw;
-//     height: 800px;
-//     // transform: rotate(-5deg);
-//     background-color: #172755;
-//     overflow: hidden;
-//     left: 0;
-//     &_top {
-//         top: 0;
-//         border-bottom: 10px solid #ef2a82;
-//     }
-//     &_bot {
-//         bottom: 800px;
-//     }
-// }
-// .background__content {
-//     width: 1600px;
-//     height: 100%;
-//     position: relative;
-//     margin: 0 auto;
-//     &::before {
-//         content: "";
-//         background-image: url("/images/background logotype/background.svg");
-//         background-size: 800px;
-//         background-repeat: no-repeat;
-//         width: 800px;
-//         height: 800px;
-//         position: absolute;
-//         opacity: 0.1;
-//         left: -600px;
-//         top: -260px;
-//     }
-//     &::after {
-//         content: "";
-//         background-image: url("/images/background logotype/background.svg");
-//         background-size: 1500px;
-//         background-repeat: no-repeat;
-//         width: 1500px;
-//         height: 1500px;
-//         position: absolute;
-//         opacity: 0.1;
-//         right: -700px;
-//         bottom: -660px;
-//     }
-// }
-// .content::before {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     z-index: -2;
-//     width: 100%;
-//     height: 800px;
-//     border-bottom: 10px solid #ef2a82;
-//     // transform: rotate(-5deg);
-//     background-color: #172755;
-//     // overflow: hidden;
-// }
-// .content::after {
-//     content: "";
-//     position: absolute;
-//     bottom: -600px;
-//     left: -200px;
-//     z-index: -2;
-//     width: calc(100vw + 1000px);
-//     height: 1330px;
-//     border-top: 10px solid #ef2a82;
-//     transform: rotate(-5deg);
-//     background-color: #172755;
-// }
 
 // Header
 
 .header {
-    // border: 1px solid blue;
     position: absolute;
     height: 140px;
     z-index: 10;
@@ -485,7 +362,6 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        align-content: center;
     }
 
     &__image {
@@ -589,16 +465,6 @@ body {
         overflow: auto;
         align-content: center;
     }
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: #172755;
-    //     z-index: -1;
-    // }
 }
 .tariffs {
     &__item {
@@ -820,7 +686,6 @@ body {
         height: 100%;
         padding: 120px 0 200px 0;
         &__content {
-            // padding: 150px 0 0 0;
             flex-direction: column-reverse;
             gap: 0;
             height: 100%;
@@ -887,7 +752,6 @@ body {
     .features__cards {
         flex-direction: column;
     }
-    // Cards in features section
     .cards {
         &__item {
             padding: 0 10px;
@@ -916,7 +780,6 @@ body {
             text-align: left;
         }
     }
-
     .caps {
         &__item {
             margin-bottom: 60px;
@@ -954,7 +817,6 @@ body {
             padding: 30px 40px;
         }
     }
-    // Graph + text card
     .caps__item_reverse {
         .caps__content {
             flex-direction: column-reverse;
@@ -1001,7 +863,6 @@ body {
         }
     }
 }
-
 @media (max-width: 700px) {
     .footer {
         height: 100px;
