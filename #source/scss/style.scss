@@ -64,7 +64,7 @@ body {
         transform: rotate(-3deg);
         &::before {
             content: "";
-            background-image: url("/images/background logotype/background.svg");
+            background-image: url("images/background logotype/background.svg");
             background-size: 600px;
             background-repeat: no-repeat;
             width: 600px;
@@ -76,7 +76,7 @@ body {
         }
         &::after {
             content: "";
-            background-image: url("/images/background logotype/background.svg");
+            background-image: url("images/background logotype/background.svg");
             background-size: 1300px;
             background-repeat: no-repeat;
             width: 1300px;
@@ -93,7 +93,7 @@ body {
         transform: rotate(-4deg);
         &::after {
             content: "";
-            background-image: url("/images/background logotype/background.svg");
+            background-image: url("images/background logotype/background.svg");
             background-size: 2100px;
             background-repeat: no-repeat;
             width: 2100px;
