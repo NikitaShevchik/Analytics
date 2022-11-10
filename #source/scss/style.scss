@@ -967,7 +967,19 @@ body {
     .price__description {
         text-align: left;
     }
-    .price__title {
+    .tariffs__item {
+        background-color: #fff;
+        box-shadow: 0px 18px 30px -15px #060f28;
+        .tariffs__button {
+            background-color: $pink;
+            border: 1px solid transparent;
+        }
+        .tariffs__title {
+            color: #172755;
+        }
+        .tariffs__price {
+            color: #172755;
+        }
     }
 }
 .header__hamburger._cross {

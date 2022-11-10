@@ -852,6 +852,20 @@ body {
   .price__description {
     text-align: left;
   }
+  .tariffs__item {
+    background-color: #fff;
+    box-shadow: 0px 18px 30px -15px #060f28;
+  }
+  .tariffs__item .tariffs__button {
+    background-color: #ef2a82;
+    border: 1px solid transparent;
+  }
+  .tariffs__item .tariffs__title {
+    color: #172755;
+  }
+  .tariffs__item .tariffs__price {
+    color: #172755;
+  }
 }
 .header__hamburger._cross span {
   rotate: 45deg;
