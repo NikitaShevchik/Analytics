@@ -34,6 +34,7 @@ body {
 .content {
     position: relative;
     overflow: hidden;
+    // height: 100vh;
 }
 
 .content__background {
@@ -45,51 +46,103 @@ body {
     background-color: #172755;
     border: 15px solid $pink;
     &_top {
-        top: -5%;
-        height: 950px;
+        top: -10%;
+        height: 1150px;
         transform: rotate(-3deg);
-        &::before {
-            content: "";
-            background-image: url("../../images/background logotype/background.svg");
-            background-size: 600px;
-            background-repeat: no-repeat;
-            width: 600px;
-            height: 600px;
-            position: absolute;
-            opacity: 0.1;
-            left: 0;
-            top: -7%;
+        // &::before {
+        //     content: "";
+        //     background-image: url("../../images/background logotype/background.svg");
+        //     transform: rotate(3deg);
+        //     background-size: 600px;
+        //     background-repeat: no-repeat;
+        //     width: 600px;
+        //     height: 600px;
+        //     position: absolute;
+        //     opacity: 0.1;
+        //     left: 0;
+        //     top: -7%;
+        // }
+        // &::after {
+        //     content: "";
+        //     background-image: url("../../images/background logotype/background.svg");
+        //     transform: rotate(3deg);
+        //     background-size: 1300px;
+        //     background-repeat: no-repeat;
+        //     width: 1300px;
+        //     height: 1300px;
+        //     position: absolute;
+        //     opacity: 0.1;
+        //     right: 0;
+        //     top: 0;
+        // }
+    }
+    .backimages {
+        height: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        // border: 1px solid #fff;
+        position: relative;
+        &_top {
+            &::before {
+                content: "";
+                background-image: url("../../images/background logotype/background.svg");
+                transform: rotate(3deg);
+                background-size: 600px;
+                background-repeat: no-repeat;
+                width: 600px;
+                height: 600px;
+                position: absolute;
+                opacity: 0.1;
+                left: -20%;
+                top: 10%;
+            }
+            &::after {
+                content: "";
+                background-image: url("../../images/background logotype/background.svg");
+                transform: rotate(3deg);
+                background-size: 1300px;
+                background-repeat: no-repeat;
+                width: 1300px;
+                height: 1300px;
+                position: absolute;
+                opacity: 0.1;
+                right: -20%;
+                top: 0;
+            }
         }
-        &::after {
-            content: "";
-            background-image: url("../../images/background logotype/background.svg");
-            background-size: 1300px;
-            background-repeat: no-repeat;
-            width: 1300px;
-            height: 1300px;
-            position: absolute;
-            opacity: 0.1;
-            right: 0;
-            top: 0;
+        &_bot {
+            &::after {
+                content: "";
+                background-image: url("../../images/background logotype/background.svg");
+                background-size: 2100px;
+                background-repeat: no-repeat;
+                width: 2100px;
+                height: 2100px;
+                position: absolute;
+                opacity: 0.1;
+                right: -60%;
+                top: 15%;
+                transform: rotate(4deg);
+            }
         }
     }
     // fix backgound on mobile
     &_bottom {
-        height: 1250px;
-        bottom: -5%;
+        height: 1400px;
+        bottom: -10%;
         transform: rotate(-4deg);
-        &::after {
-            content: "";
-            background-image: url("../../images/background logotype/background.svg");
-            background-size: 2100px;
-            background-repeat: no-repeat;
-            width: 2100px;
-            height: 2100px;
-            position: absolute;
-            opacity: 0.1;
-            right: -20%;
-            top: 15%;
-        }
+        // &::after {
+        //     content: "";
+        //     background-image: url("../../images/background logotype/background.svg");
+        //     background-size: 2100px;
+        //     background-repeat: no-repeat;
+        //     width: 2100px;
+        //     height: 2100px;
+        //     position: absolute;
+        //     opacity: 0.1;
+        //     right: -20%;
+        //     top: 15%;
+        // }
     }
 }
 
@@ -606,6 +659,10 @@ body {
         &_bottom {
             height: 1250px;
             bottom: -5%;
+        }
+        &_top {
+            top: -5%;
+            height: 950px;
         }
     }
     .caps__description {

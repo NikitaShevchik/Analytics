@@ -118,40 +118,43 @@ body {
   border: 15px solid #ef2a82;
 }
 .content__background_top {
-  top: -5%;
-  height: 950px;
+  top: -10%;
+  height: 1150px;
   transform: rotate(-3deg);
 }
-.content__background_top::before {
+.content__background .backimages {
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
+.content__background .backimages_top::before {
   content: "";
   background-image: url("../../images/background logotype/background.svg");
+  transform: rotate(3deg);
   background-size: 600px;
   background-repeat: no-repeat;
   width: 600px;
   height: 600px;
   position: absolute;
   opacity: 0.1;
-  left: 0;
-  top: -7%;
+  left: -20%;
+  top: 10%;
 }
-.content__background_top::after {
+.content__background .backimages_top::after {
   content: "";
   background-image: url("../../images/background logotype/background.svg");
+  transform: rotate(3deg);
   background-size: 1300px;
   background-repeat: no-repeat;
   width: 1300px;
   height: 1300px;
   position: absolute;
   opacity: 0.1;
-  right: 0;
+  right: -20%;
   top: 0;
 }
-.content__background_bottom {
-  height: 1250px;
-  bottom: -5%;
-  transform: rotate(-4deg);
-}
-.content__background_bottom::after {
+.content__background .backimages_bot::after {
   content: "";
   background-image: url("../../images/background logotype/background.svg");
   background-size: 2100px;
@@ -160,8 +163,14 @@ body {
   height: 2100px;
   position: absolute;
   opacity: 0.1;
-  right: -20%;
+  right: -60%;
   top: 15%;
+  transform: rotate(4deg);
+}
+.content__background_bottom {
+  height: 1400px;
+  bottom: -10%;
+  transform: rotate(-4deg);
 }
 
 .header {
@@ -638,6 +647,10 @@ body {
   .content__background_bottom {
     height: 1250px;
     bottom: -5%;
+  }
+  .content__background_top {
+    top: -5%;
+    height: 950px;
   }
   .caps__description {
     padding-right: 100px;
